@@ -1,2 +1,9 @@
-#gateway:
+#gateway-api install for missing crds
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/latest/download/standard-install.yaml
+
+#expose, NodePort
+kubectl expose deployment <name> --type=NodePort --name=<service-name> --port=<port> --target-port=<port>
+
+#expose, NodePort
+kubectl expose <resource> --type=NodePort --name=<service-name>
+
