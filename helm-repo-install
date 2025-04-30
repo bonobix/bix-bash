@@ -1,0 +1,11 @@
+#MinIO install
+1. helm repo add minio https://charts.min.io
+2. helm repo update
+3. helm install minio minio/minio -n minio
+
+#Prometheus install
+1.helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+2.helm repo update
+3.helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack
+
+  

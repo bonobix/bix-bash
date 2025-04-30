@@ -1,5 +1,0 @@
-MinIO install
-
-1. helm repo add minio https://charts.min.io
-2. helm repo update
-3. helm install minio minio/minio -n minio
