@@ -1,11 +1,14 @@
-#MinIO install
+#MinIO-install
 1. helm repo add minio https://charts.min.io
 2. helm repo update
 3. helm install minio minio/minio -n minio
 
-#Prometheus install
+#Prometheus-install
 1.helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 2.helm repo update
 3.helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack
 
-  
+#Helm-template
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo update
+helm template argo/argo-cd --version 7.7.3
