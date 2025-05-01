@@ -76,9 +76,9 @@ done
 # ===============================
 # Step 2: Install CRDs
 # ===============================
-
+#Use kubectl create instead of kubectl apply otherwise you get this error: The CustomResourceDefinition "" is invalid: metadata.annotations: Too long: may not be more than 262144 bytes
 echo "📦 Applying cert-manager CRDs..."
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/latest/download/cert-manager.crds.yaml
+kubectl create -f https://github.com/cert-manager/cert-manager/releases/latest/download/cert-manager.crds.yaml
 
 echo "📦 Applying kube-prometheus-stack CRDs..."
 # List of Prometheus Operator CRDs
@@ -93,13 +93,13 @@ CRDS=(
 )
 
 for crd in "${CRDS[@]}"; do
-  kubectl apply -f "https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/main/example/prometheus-operator-crd/monitoring.coreos.com_${crd}.yaml"
+  kubectl create -f "https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/main/example/prometheus-operator-crd/monitoring.coreos.com_${crd}.yaml"
 done
 
 echo "📦 Applying Argo CD CRDs..."
 # Pull and extract Argo CD CRDs using helm
 helm pull argo/argo-cd --untar
-kubectl apply -f argo-cd/crds/
+kubectl create -f argo-cd/crds/
 
 echo "✅ All CRDs installed!"
 
