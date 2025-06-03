@@ -1,2 +1,2 @@
-# bash-scripts
-collection of bash scripts for different purposes
+# scripts bash
+la mia collezione di script bash
