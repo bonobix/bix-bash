@@ -1,5 +1,5 @@
 """
-lista di repo aggiungi & installa.
+lista di repo aggiungi & installa per ambiente pronto.
 """
 
 
