@@ -1,5 +1,16 @@
 #!/bin/bash
 
+"""
+This is: poor man’s Ansible
+
+1.Copia i file della nuova build su ciascun server
+2.Riavvia il servizio web remoto
+3.Controlla che l’app risponda (HTTP 200)
+4.Ferma il servizio se fallisce un deploy
+5.Esegue tutto su più server
+
+"""
+
 # Variables
 SOURCE_DIR="/home/user/app/build"
 SERVERS=("web1.example.com" "web2.example.com")  # Array of target servers
