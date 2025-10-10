@@ -1,5 +1,9 @@
+#!/bin/bash
+
 """
+
 lista di repo aggiungi & installa per ambiente pronto.
+
 """
 
 
