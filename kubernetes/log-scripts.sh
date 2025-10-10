@@ -1,5 +1,7 @@
 #!/bin/bash
+
 #invia alert in base al numero di Pod
+
 POD_COUNT=$(kubectl get pods -A -o name | wc -l)
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 
