@@ -1,2 +1,2 @@
-#script di utilizzo con processi & varie in relazione a OS
-script da usare con processi
+#### script di utilizzo con processi & storage
+script da usare con processi e storage.
