@@ -1,3 +1,7 @@
+"""
+crea template delle repo
+"""
+
 # ========================
 # MinIO - Object Storage
 # ========================
