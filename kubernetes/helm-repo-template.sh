@@ -1,5 +1,9 @@
+#!/bin/bash
+
 """
+
 crea template delle repo
+
 """
 
 # ========================
