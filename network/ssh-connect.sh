@@ -1,5 +1,17 @@
 #!/bin/bash
 
+"""
+Output di una lista host a cui connettersi tramite ssh
+
+esempio di file .ssh/config con cui questo script lavora:
+#Host <tuo-hostname> 
+#    HostName <tuo-hostname>
+#    User <tuo-user>
+#    IdentityFile ~/.ssh/id_rsa
+#    IdentitiesOnly yes
+
+"""
+
 # Verifica se il file ~/.ssh/config esiste
 CONFIG_FILE="$HOME/.ssh/config"
 if [ ! -f "$CONFIG_FILE" ]; then
