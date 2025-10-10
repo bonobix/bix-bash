@@ -1,5 +1,16 @@
 #!/bin/bash
 
+"""
+Questo script copia i file di una dir dichiarata nella dir del server web es. nginx e ne fa un backup in un'altra dir separata.
+- Backup
+Crea un backup dell’attuale versione
+- Deploy
+Copia i nuovi file nel web root
+- Restart
+Riavvia il servizio web
+
+"""
+
 # Variables
 SOURCE_DIR="/home/user/app/build"  # Where your built app lives
 DEPLOY_DIR="/var/www/html"         # Web server directory (e.g., Nginx/Apache)
