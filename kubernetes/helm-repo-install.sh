@@ -1,3 +1,8 @@
+"""
+lista di repo aggiungi & installa.
+"""
+
+
 # ========================
 # MinIO - Object Storage
 # ========================
