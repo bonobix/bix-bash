@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Genera un template Helm chart riutilizzabile per vari progetti
+# Genera un template Helm chart per vari progetti
 # Usage: ./create-helm-template.sh myapp
 
 set -e
