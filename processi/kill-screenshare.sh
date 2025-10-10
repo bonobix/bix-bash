@@ -1,5 +1,10 @@
 #!/bin/bash
-# kill_processes.sh
+
+"""
+
+Loop per killare processi SidecarRelay|photolibraryd|ScreenSharingSubscriber su MAC
+
+"""
 
 while true; do
   # List processes and filter out the grep command itself
