@@ -1,5 +1,12 @@
 #!/bin/bash
 
+"""
+script “pull” che:
+	•	Sincronizza il codice da Git;
+	•	Installa dipendenze;
+	•	Riavvia l’applicazione come servizio systemd.
+"""
+
 # Variables
 REPO_URL="https://github.com/yourusername/your-repo.git"
 DEPLOY_DIR="/var/www/myapp"
