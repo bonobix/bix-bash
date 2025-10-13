@@ -1,10 +1,10 @@
 #!/bin/bash
 
-"""
+: <<'COMMENT'
 
 lista di repo aggiungi & installa per ambiente pronto.
 
-"""
+COMMENT
 
 
 # ========================
