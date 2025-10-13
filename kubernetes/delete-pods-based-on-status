@@ -1,0 +1,12 @@
+"""
+
+identifica lo status dei Pod nel cluster ed elimina in base allo status scelto, 
+es. grep Terminating elimina tutti i Pod con status Terminating
+
+"""
+
+kubectl get pods --all-namespaces |\
+grep Terminating |\
+awk '{print $1, $2}' |\
+while read ns pod; do   echo "Eliminating pod $pod from namespace $ns"; \
+kubectl delete pod "$pod" -n "$ns" --grace-period=0 --force; done
