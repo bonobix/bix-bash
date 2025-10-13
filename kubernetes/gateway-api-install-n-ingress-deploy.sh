@@ -1,6 +1,6 @@
 #!/bin/bash
 
-"""
+: <<'COMMENT'
 
 installa gateway API, kustomize e fai deploy di un Ingress nginx
 
@@ -8,7 +8,7 @@ Installi Gateway API per abilitare la nuova API standard Kubernetes
 - Deploy INGRESS per gestire concretamente il traffico
 - Entrambi servono per coesistere durante la transizione Ingress → Gateway
 
-"""
+COMMENT
 
 set -e
 
