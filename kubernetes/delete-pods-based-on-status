@@ -1,11 +1,11 @@
 #!/bin/bash
 
-"""
+: <<'COMMENT'
 
 identifica lo status dei Pod nel cluster ed elimina in base allo status scelto, 
 es. grep Terminating elimina tutti i Pod con status Terminating
 
-"""
+COMMENT
 
 kubectl get pods --all-namespaces |\
 grep Terminating |\
