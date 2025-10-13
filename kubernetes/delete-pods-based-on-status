@@ -1,3 +1,5 @@
+#!/bin/bash
+
 """
 
 identifica lo status dei Pod nel cluster ed elimina in base allo status scelto, 
