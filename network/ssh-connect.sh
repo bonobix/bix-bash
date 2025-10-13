@@ -1,6 +1,7 @@
 #!/bin/bash
 
-"""
+: <<'COMMENT'
+
 Output di una lista host a cui connettersi tramite ssh
 
 esempio di file .ssh/config con cui questo script lavora:
@@ -10,7 +11,7 @@ esempio di file .ssh/config con cui questo script lavora:
 #    IdentityFile ~/.ssh/id_rsa
 #    IdentitiesOnly yes
 
-"""
+COMMENT
 
 # Verifica se il file ~/.ssh/config esiste
 CONFIG_FILE="$HOME/.ssh/config"
