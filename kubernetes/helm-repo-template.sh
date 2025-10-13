@@ -1,10 +1,10 @@
 #!/bin/bash
 
-"""
+: <<'COMMENT'
 
 crea template delle repo
 
-"""
+COMMENT
 
 # ========================
 # MinIO - Object Storage
