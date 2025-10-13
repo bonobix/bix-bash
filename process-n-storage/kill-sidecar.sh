@@ -1,10 +1,10 @@
 #!/bin/bash
 
-"""
+: <<'COMMENT'
 
 Loop per killare processi SidecarRelay|photolibraryd su MAC
 
-"""
+COMMENT
 
 while true; do
   # List processes and filter out the grep command itself
