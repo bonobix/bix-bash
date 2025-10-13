@@ -1,6 +1,7 @@
 #!/bin/bash
 
-"""
+: <<'COMMENT'
+
 This is: poor man’s Ansible
 
 1.Copia i file della nuova build su ciascun server
@@ -9,7 +10,7 @@ This is: poor man’s Ansible
 4.Ferma il servizio se fallisce un deploy
 5.Esegue tutto su più server
 
-"""
+COMMENT
 
 # Variables
 SOURCE_DIR="/home/user/app/build"
