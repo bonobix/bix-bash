@@ -38,6 +38,7 @@ sudo systemctl enable containerd
 containerd --version
 sudo ctr version
 sudo ctr images pull docker.io/library/alpine:latest
+
 #--------------------------------------------------------------------------------
 #HELM install
 
@@ -112,9 +113,9 @@ metadata:
   name: l2-advert
   namespace: metallb-system
 EOF
+
 #--------------------------------------------------------------------------------
 #INGRESS CONTROLLER install 
-
 #https://kubernetes.github.io/ingress-nginx/deploy/
 
 helm upgrade --install ingress-nginx ingress-nginx \
