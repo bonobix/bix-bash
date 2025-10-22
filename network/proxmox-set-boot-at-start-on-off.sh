@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#imposta start at boot on/off per VM proxmox
 echo "==== Proxmox VM Boot Config Script ===="
 
 # Chiede range di VM
