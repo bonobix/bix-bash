@@ -1,5 +1,11 @@
 #!/bin/bash
-# Create the VM to be used for the template.
+
+: <<'COMMENT'
+
+Crea Template da usare per creare VM
+
+COMMENT
+
 qm create 9991 --name "template-ubuntu-2204-cloudinit" \
   --ostype l26 \
   --memory 1024 --balloon 0 \
