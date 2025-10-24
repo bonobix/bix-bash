@@ -1,4 +1,11 @@
 #!/bin/bash
+
+: <<'COMMENT'
+
+Imposta l'opzione di start at boot delle VM Proxmox, scegli se ON/OFF
+
+COMMENT
+
 #imposta start al boot delle vm su un host proxmox
 echo "==== Proxmox VM Boot Config Script ===="
 
