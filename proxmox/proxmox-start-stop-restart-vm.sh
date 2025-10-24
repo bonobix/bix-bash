@@ -1,5 +1,11 @@
 #!/bin/bash
 
+: <<'COMMENT'
+
+Scegli un range di VM e poi scegli se eseguire start,stop o restart.
+
+COMMENT
+
 # Chiede il range di VM
 read -p "Inserisci il range di VM (es. 160-166): " RANGE
 read -p "Azione da eseguire (start, stop, restart): " ACTION
