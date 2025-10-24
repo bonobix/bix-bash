@@ -19,10 +19,10 @@ for vmid in $(seq $start $end); do
     if qm list | awk '{print $1}' | grep -q "^$vmid$"; then
         if [ "$action" == "on" ]; then
             qm set $vmid --onboot 1
-            echo "VM $vmid: start on boot ENABLED ✅"
+            echo "VM $vmid: start on boot ENABLED"
         else
             qm set $vmid --onboot 0
-            echo "VM $vmid: start on boot DISABLED ❌"
+            echo "VM $vmid: start on boot DISABLED"
         fi
     else
         echo "VM $vmid non esiste, salto..."
