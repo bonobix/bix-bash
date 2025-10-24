@@ -1,5 +1,11 @@
 #!/bin/bash
 
+: <<'COMMENT'
+
+Crea Vm partendo da un template, bisogna cambiare le variabili per soddisfare quelle che sono le esigenze.
+
+COMMENT
+
 TEMPLATE_ID=9990                  # ID della cloud-init template VM
 BASE_IP="192.168.1"            # Prefisso rete
 GATEWAY="<VM-gateway>"       # Specifica Gateway 
