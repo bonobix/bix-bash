@@ -40,7 +40,7 @@ sudo kubectl apply -f canal.yaml
 sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml
 #inizializza il master
-kubectl init
+kubeadm init
 #da passare come root dopo kubeadm init 
 export KUBECONFIG=/etc/kubernetes/admin.conf
 
