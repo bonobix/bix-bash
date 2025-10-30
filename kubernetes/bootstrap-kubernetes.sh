@@ -7,8 +7,17 @@ Rende operativo il cluster kubernetes installando componenti come Helm, CNI, Met
 COMMENT
 
 #--------------------------------------------------------------------------------
-#HELM install
+#HELM install con curl | bash
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+#--------------------------------------------------------------------------------
+#HELM install con apt
+
+sudo apt-get install -y apt-transport-https && \
+curl https://baltocdn.com/helm/signing.asc | sudo apt-key add - && \
+echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list && \
+sudo apt-get update && sudo apt-get install -y helm
+
 
 #--------------------------------------------------------------------------------
 #DOCKER install 
@@ -42,15 +51,6 @@ sudo systemctl enable containerd
 containerd --version
 sudo ctr version
 sudo ctr images pull docker.io/library/alpine:latest
-
-#--------------------------------------------------------------------------------
-#HELM install
-
-sudo apt-get install -y apt-transport-https && \
-curl https://baltocdn.com/helm/signing.asc | sudo apt-key add - && \
-echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list && \
-sudo apt-get update && sudo apt-get install -y helm
-
 
 #--------------------------------------------------------------------------------
 #CANAL install per k8s networking
