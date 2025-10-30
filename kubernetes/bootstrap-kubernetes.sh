@@ -161,4 +161,11 @@ kubectl create namespace loki
 helm install loki grafana/loki-stack --namespace=loki --set grafana.enabled=true \
 	--set grafana.service.type=ClusterIP
 #--set grafana.adminPassword=admin \
+
 #--------------------------------------------------------------------------------
+#ARGOCD para Gitops
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo update
+kubectl create namespace argocd
+helm install argocd argo/argo-cd -n argocd
+
