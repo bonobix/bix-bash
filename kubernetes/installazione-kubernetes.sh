@@ -35,5 +35,20 @@ sudo apt update
 sudo apt install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 sudo systemctl enable kubelet
+
+#--------------------------------------------------------------------------------
+#CONTAINERD install
+
+sudo apt install containerd -y
+sudo mkdir -p /etc/containerd
+sudo containerd config default | sudo tee /etc/containerd/config.toml
+sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/' /etc/containerd/config.toml
+sudo systemctl restart containerd
+sudo systemctl enable containerd
+containerd --version
+sudo ctr version
+sudo ctr images pull docker.io/library/alpine:latest
+
+kubeadm init
 export KUBECONFIG=/etc/kubernetes/admin.conf
 
