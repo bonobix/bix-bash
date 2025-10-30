@@ -7,6 +7,10 @@ Rende operativo il cluster kubernetes installando componenti come MetalLB, Gatew
 COMMENT
 
 #--------------------------------------------------------------------------------
+#HELM install
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+#--------------------------------------------------------------------------------
 #DOCKER install 
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y ca-certificates curl gnupg lsb-release
@@ -60,8 +64,10 @@ containerd config default | sudo tee /etc/containerd/config.toml
 kubectl init
 #da passare come root dopo kubeadm init 
 export KUBECONFIG=/etc/kubernetes/admin.conf
-#install helm
-curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+
+#--------------------------------------------------------------------------------
+#Traefik Ingress install with Helm
 #install traefik ingress controller
 helm repo add traefik https://traefik.github.io/charts
 helm repo update
@@ -72,7 +78,6 @@ helm install traefik traefik/traefik --namespace traefik --create-namespace \
   --set dashboard.enabled=true \
   --set dashboard.ingress.enabled=true \
   --set dashboard.ingress.hosts[0]=traefik.local
-
 
 
 
