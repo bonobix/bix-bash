@@ -11,19 +11,6 @@ COMMENT
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
 #--------------------------------------------------------------------------------
-#CONTAINERD install
-
-sudo apt install containerd -y
-sudo mkdir -p /etc/containerd
-sudo containerd config default | sudo tee /etc/containerd/config.toml
-sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/' /etc/containerd/config.toml
-sudo systemctl restart containerd
-sudo systemctl enable containerd
-containerd --version
-sudo ctr version
-sudo ctr images pull docker.io/library/alpine:latest
-
-#--------------------------------------------------------------------------------
 #CANAL install per k8s networking
 
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.30.0/manifests/canal.yaml -O
@@ -31,10 +18,6 @@ sudo kubectl apply -f canal.yaml
 #modifica containerd .toml con SystemdCgroup = true
 sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml
-#inizializza il master
-kubeadm init
-#da passare come root dopo kubeadm init 
-export KUBECONFIG=/etc/kubernetes/admin.conf
 
 #--------------------------------------------------------------------------------
 #MetalLB-install K8s Load Balancer
