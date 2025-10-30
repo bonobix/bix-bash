@@ -8,15 +8,7 @@ COMMENT
 
 #--------------------------------------------------------------------------------
 #HELM install con curl | bash
-#curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
-
-#--------------------------------------------------------------------------------
-#HELM install con apt
-
-sudo apt-get install -y apt-transport-https && \
-curl https://baltocdn.com/helm/signing.asc | sudo apt-key add - && \
-echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list && \
-sudo apt-get update && sudo apt-get install -y helm
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
 #--------------------------------------------------------------------------------
 #CONTAINERD install
