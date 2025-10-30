@@ -2,7 +2,7 @@
 
 : <<'COMMENT'
 
-Rende operativo il cluster kubernetes installando componenti come MetalLB, Gateway API...etc
+Rende operativo il cluster kubernetes installando componenti come Helm, CNI, MetalLB, Gateway API...etc pezzo per pezzo
 
 COMMENT
 
