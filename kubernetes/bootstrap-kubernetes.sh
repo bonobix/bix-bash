@@ -8,7 +8,7 @@ COMMENT
 
 #--------------------------------------------------------------------------------
 #HELM install con curl | bash
-curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+#curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
 #--------------------------------------------------------------------------------
 #HELM install con apt
@@ -17,27 +17,6 @@ sudo apt-get install -y apt-transport-https && \
 curl https://baltocdn.com/helm/signing.asc | sudo apt-key add - && \
 echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list && \
 sudo apt-get update && sudo apt-get install -y helm
-
-
-#--------------------------------------------------------------------------------
-#DOCKER install 
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y ca-certificates curl gnupg lsb-release
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
-  https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" \
-  | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo systemctl enable docker
-sudo systemctl start docker
-docker --version
-sudo usermod -aG docker $USER
-newgrp docker
 
 #--------------------------------------------------------------------------------
 #CONTAINERD install
@@ -64,22 +43,6 @@ containerd config default | sudo tee /etc/containerd/config.toml
 kubectl init
 #da passare come root dopo kubeadm init 
 export KUBECONFIG=/etc/kubernetes/admin.conf
-
-
-#--------------------------------------------------------------------------------
-#Traefik Ingress install with Helm
-#install traefik ingress controller
-helm repo add traefik https://traefik.github.io/charts
-helm repo update
-helm install traefik traefik/traefik --namespace traefik --create-namespace \
-  --set ingressClass.enabled=true \
-  --set ingressClass.isDefaultClass=true \
-  --set service.type=NodePort \
-  --set dashboard.enabled=true \
-  --set dashboard.ingress.enabled=true \
-  --set dashboard.ingress.hosts[0]=traefik.local
-
-
 
 #--------------------------------------------------------------------------------
 #MetalLB-install K8s Load Balancer
