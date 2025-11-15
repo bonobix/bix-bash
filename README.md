@@ -1,3 +1,3 @@
 # script bash
-la mia collezione di script bash
+my collection of bash scripts
 
