@@ -1,5 +1,13 @@
 #!/bin/bash
 
+: <<'COMMENT'
+
+script utile quando si usa Proxmox su un portatile, disabilita il suspend automatico del portatile quando si chiude il Lid
+
+COMMENT
+
+
+
 set -e
 
 CONF="/etc/systemd/logind.conf"
