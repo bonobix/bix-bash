@@ -2,7 +2,13 @@
 
 : <<'COMMENT'
 
-script utile quando si usa Proxmox su un portatile, disabilita il suspend automatico del portatile quando si chiude il Lid
+script utile quando si usa Proxmox su un portatile, disabilita il suspend automatico del portatile quando si chiude il Lid,
+di base i comandi da eseguire sono questi:
+vim /etc/systemd/logind.conf
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+HandleLidSwitchDocked=ignore
+systemctl restart systemd-logind
 
 COMMENT
 
