@@ -1,0 +1,31 @@
+###Ricerca e filtro
+grep, egrep, fgrep, find, locate
+Cercano pattern o file su filesystem o output.
+
+###Manipolazione testo
+awk, sed, cut, tr, paste, sort, uniq, join
+Estraggono, trasformano o combinano testo.
+
+###Gestione processi
+ps, top, htop, pgrep, kill, nice, renice
+Monitorano e controllano i processi.
+
+###Gestione file e disco
+df, du, lsblk, mount, umount, lsof, fuser
+Gestiscono storage e punti di montaggio.
+
+###Rete
+netstat, ss, ip, nmap, curl, wget, ping, traceroute, nc
+Diagnosi e test di rete.
+
+###Permessi e utenti
+chown, chmod, usermod, sudo, visudo
+Gestione di accessi e privilegi.
+
+###Automazione / scripting
+bash, cron, systemd, expect 
+Task automatici, script interattivi.
+
+###Log e analisi
+journalctl, dmesg, tail, less, head
+Lettura e analisi dei log di sistema.

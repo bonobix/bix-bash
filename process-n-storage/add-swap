@@ -1,0 +1,20 @@
+#aggiungi swap al sistema
+
+# 1. Crea un file di swap da 4GB
+sudo fallocate -l 4G /swapfile
+
+# 2. Proteggi il file
+sudo chmod 600 /swapfile
+
+# 3. Inizializza lo spazio di swap
+sudo mkswap /swapfile
+
+# 4. Abilita la swap
+sudo swapon /swapfile
+
+# 5. Verifica
+swapon --show
+free -h
+
+# 6. Rendi permanente la modifica (in /etc/fstab)
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
