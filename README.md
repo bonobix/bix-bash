@@ -1,3 +1,3 @@
-# script bash
+# bash
 my collection of bash scripts
 
