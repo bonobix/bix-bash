@@ -2,7 +2,7 @@
 
 : <<'COMMENT'
 
-esegue curl con output in stile ping 
+esegue curl con output in stile ping, utile per testare Load Balancer
 
 COMMENT
 
